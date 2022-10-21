@@ -1,6 +1,6 @@
 # http_response
 
-A new Flutter project.
+Implementing Response type results. 
 
 ## Getting Started
 
