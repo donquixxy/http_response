@@ -11,7 +11,13 @@ class UserRepository implements UserRepositoryImplements {
 
   @override
   Future<ApiResultsList<UserModels>> getAllUser() async {
-    var response = await providers.get('https://reqres.in/api/');
+    
+    //THIS IS THE INCORRECT URL
+    //KINDLY UNCOMMENT BELOW CODE IN ORDER TO TRY THE FAILURE RESULTS
+    // var response = await providers.get('https://reqres.in/api/');
+    
+    var response = await providers.get('https://reqres.in/api/users?page=2');
+    
     return ApiResultsList.fromJson(
       response.data ?? {},
       'data',
